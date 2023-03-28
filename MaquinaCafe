@@ -1,0 +1,130 @@
+public class MaquinaCafe {
+
+    
+
+    private int agua;
+
+    private int cafe;
+
+    private int crema;
+
+    private int vasos;
+
+    
+
+  
+
+    public MaquinaCafe() {
+
+        this.agua = 5000;
+
+        this.cafe = 1000;
+
+        this.crema = 1500;
+
+        this.vasos = 50;
+
+    }
+
+    
+
+  
+
+    public void hacerAmericano() {
+
+        if (this.agua >= 180 && this.cafe >= 15 && this.vasos > 0) {
+
+            this.agua -= 180;
+
+            this.cafe -= 15;
+
+            this.vasos--;
+
+            System.out.println("Aquí tiene su café americano.");
+
+            System.out.println("Quedan " + this.agua + " ml de agua, " + this.cafe + " g de cafe y " + this.crema + " ml de crema.");
+
+        } else {
+
+            System.out.println("Lo siento, no se puede hacer más café americano. Se han agotado los recursos.");
+
+        }
+
+    }
+
+    
+
+    
+
+    public void hacerExpreso() {
+
+        if (this.agua >= 120 && this.cafe >= 20 && this.vasos > 0) {
+
+            this.agua -= 120;
+
+            this.cafe -= 20;
+
+            this.vasos--;
+
+            System.out.println("Aquí tiene su café expreso.");
+
+            System.out.println("Quedan " + this.agua + " ml de agua, " + this.cafe + " g de cafe y " + this.crema + " ml de crema.");
+
+        } else {
+
+            System.out.println("Lo siento, no se puede hacer más café expreso. Se han agotado los recursos.");
+
+        }
+
+    }
+
+    
+
+   
+
+    public void hacerCapuchino() {
+
+        if (this.agua >= 100 && this.cafe >= 14 && this.crema >= 70 && this.vasos > 0) {
+
+            this.agua -= 100;
+
+            this.cafe -= 14;
+
+            this.crema -= 70;
+
+            this.vasos--;
+
+            System.out.println("Aquí tiene su capuchino.");
+
+            System.out.println("Quedan " + this.agua + " ml de agua, " + this.cafe + " g de cafe y " + this.crema + " ml de crema.");
+
+        } else {
+
+            System.out.println("Lo siento, no se puede hacer más capuchino. Se han agotado los recursos.");
+
+        }
+
+    }
+
+    
+
+
+
+    public void mostrarCantidad() {
+
+        System.out.println("Quedan " + this.agua + " ml de agua, " + this.cafe + " g de cafe y " + this.crema + " ml de crema.");
+
+    }
+
+    
+
+
+
+    public void mostrarVasos() {
+
+        System.out.println("Quedan " + this.vasos + " vasos.");
+
+    }
+
+}
+
